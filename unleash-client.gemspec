@@ -31,6 +31,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-json_expectations", "~> 2.2"
   spec.add_development_dependency "webmock", "~> 3.8"
 
-  spec.add_development_dependency "coveralls", "~> 0.8"
+  spec.add_development_dependency "coveralls_reborn", "~> 0.22.0"
   spec.add_development_dependency "rubocop", "~> 0.80"
 end
