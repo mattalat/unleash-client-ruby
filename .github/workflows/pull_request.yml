@@ -34,14 +34,7 @@ jobs:
         run: git clone --depth 5 --branch v3.3.0 https://github.com/Unleash/client-specification.git client-specification
       - name: Run tests
         run: bundle exec rake
+        env:
+          COVERALLS_REPO_TOKEN: ${{ github.token }}
 
-  finish:
-    needs: test
-    runs-on: ${{ matrix.os }}-latest
-    steps:
-      - name: Coveralls Finished
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ github.token }}
-          parallel-finished: true
 
